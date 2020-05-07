@@ -6,7 +6,7 @@
 #    By: ginger <ginger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/22 13:50:30 by ginger            #+#    #+#              #
-#    Updated: 2020/05/07 15:51:43 by ginger           ###   ########.fr        #
+#    Updated: 2020/05/07 16:54:08 by ginger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,10 +33,10 @@ OBJS = $(SRCS:.c=.o)
 INCLUDES = -I./libft/ \
 	-I./minilibx/
 
-LIBSINC = -L./libft/ \
+LIBSINC = -L../libft/ \
 	-L./minilibx/
 
-LIBFTPATH = ./libft/
+LIBFTPATH = ../libft/
 MINILIBXPATH = ./minilibx/
 
 LIBSNAME = libft.a \
@@ -50,7 +50,7 @@ HEADERS = fdf.h \
 all: $(NAME)
 
 %.o: %.c $(HEADERS)
-	$(CC) $(INCLUDES) -o $@ -c $<
+	$(CC) $(FLAGS) $(INCLUDES) -o $@ -c $<
 
 $(NAME): $(OBJS)
 	@$(MAKE) -C $(LIBFTPATH)

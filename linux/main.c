@@ -30,7 +30,7 @@ int				main(int ac, char **av)
 		if (!(window = new_window(map)))
 			terminate(ERR_WINDOW_INIT);
 		structure_to_array(&coords_stack, map);
-		window->camera = init_camera_position(window);
+		window->camera = init_camera_position();
 		draw(map, window);
 		controls(window);
 		mlx_loop(window->mlx_ptr);
