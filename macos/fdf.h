@@ -98,7 +98,7 @@ int					check_width(int *width);
 void				controls(t_window *window);
 void				count_white_spaces(char *line);
 void				draw(t_map *map, t_window *window);
-t_camera			*init_camera_position(t_window *window);
+t_camera			*init_camera_position(void);
 void				free_arr(char **arr);
 int					ft_atoi_base(const char *str, int base);
 t_bool				ft_is_number(char *str, int base);

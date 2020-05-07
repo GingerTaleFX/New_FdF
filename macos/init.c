@@ -71,7 +71,7 @@ t_coords		*new_coord(char *line)
 	return (coord);
 }
 
-t_camera		*init_camera_position(t_window *window)
+t_camera		*init_camera_position(void)
 {
 	t_camera	*camera;
 

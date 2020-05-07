@@ -52,8 +52,8 @@ int				key_press(int key, void *param)
 
 void			controls(t_window *window)
 {
-	mlx_hook(window->win_ptr, 2, KeyPressMask, \
+	mlx_hook(window->win_ptr, 2, 0, \
 	key_press, window);
-	mlx_hook(window->win_ptr, 4, ButtonPressMask, \
+	mlx_hook(window->win_ptr, 4, 0, \
 	mouse_scroll_and_press, window);
 }
