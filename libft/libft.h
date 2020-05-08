@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 16:16:25 by kroselin          #+#    #+#             */
-/*   Updated: 2020/05/08 20:25:46 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/08 20:43:37 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,19 +39,13 @@ typedef	struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-//typedef struct	s_arr
-//{
-//	int				fd;
-//	char			*rest;
-//	struct s_arr	*next;
-//}				t_arr;
-
-typedef struct		s_file
+typedef struct	s_arr
 {
 	int				fd;
-	char			*str;
-	struct s_file	*next;
-}					t_file;
+	char			*rest;
+	struct s_arr	*next;
+}				t_arr;
+
 
 int				get_next_line(const int fd, char **line);
 int				ft_atoi(const char *str);
@@ -120,5 +114,5 @@ size_t			ft_strlen(const char *str);
 size_t			ft_strnlen(const char *src, size_t maxlen);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-//t_arr			*newlist(const int fd);
+t_arr			*newlist(const int fd);
 #endif
