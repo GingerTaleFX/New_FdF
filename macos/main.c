@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:22 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 21:48:34 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/08 10:18:44 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int				main(int ac, char **av)
 
 	errno = 0;
 	coords_stack = NULL;
-	if (ac >= 1)
+	if (ac == 2)
 	{
 		if ((fd = open(av[1], O_RDONLY, 0)) <= 0)
 			terminate(ERR_READING);
