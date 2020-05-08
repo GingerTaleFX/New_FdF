@@ -6,7 +6,7 @@
 /*   By: kroselin <kroselin@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/09/10 16:16:25 by kroselin          #+#    #+#             */
-/*   Updated: 2019/09/25 12:22:29 by kroselin         ###   ########.fr       */
+/*   Updated: 2020/05/08 20:25:46 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <sys/types.h>
 # include <sys/stat.h>
 # include <fcntl.h>
-# define BUFF_SIZE 1
+# define BUFF_SIZE 2048
 # define FT_MIN(A, B) (((A) < (B)) ? (A) : (B))
 # define FT_MAX(A, B) (((A) > (B)) ? (A) : (B))
 
@@ -39,13 +39,21 @@ typedef	struct	s_list
 	struct s_list	*next;
 }				t_list;
 
-typedef struct	s_arr
+//typedef struct	s_arr
+//{
+//	int				fd;
+//	char			*rest;
+//	struct s_arr	*next;
+//}				t_arr;
+
+typedef struct		s_file
 {
 	int				fd;
-	char			*rest;
-	struct s_arr	*next;
-}				t_arr;
+	char			*str;
+	struct s_file	*next;
+}					t_file;
 
+int				get_next_line(const int fd, char **line);
 int				ft_atoi(const char *str);
 int				ft_memcmp(const void *s1, const void *s2, size_t n);
 int				ft_strcmp(const char *s1, const char *s2);
@@ -96,11 +104,13 @@ char			*ft_strncat(char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strnstr(const char *str1, const char *str2, size_t len);
 char			*ft_strrchr(const char *s, int c);
+char			*ft_strchrs(const char *s, int c);
 char			*ft_strstr(const char *str1, const char *str2);
 char			*ft_strnew(size_t size);
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char(*f)(unsigned int, char));
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
+char			*ft_strsubchr(const char *s, char c);
 char			*ft_strjoin(char const *s1, char const *s2);
 char			*ft_strtrim(char const *s);
 char			**ft_strsplit(char const *s, char c);
@@ -110,5 +120,5 @@ size_t			ft_strlen(const char *str);
 size_t			ft_strnlen(const char *src, size_t maxlen);
 t_list			*ft_lstnew(void const *content, size_t content_size);
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
-t_arr			*newlist(const int fd);
+//t_arr			*newlist(const int fd);
 #endif
