@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:51 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 16:56:33 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/08 10:22:34 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "../libft/libft.h"
 # include "errors.h"
 # include "colors.h"
-# include "linux_controls.h"
+# include "mac_controls.h"
 # include "minilibx/mlx.h"
 # include <stdio.h>
 # include <errno.h>
