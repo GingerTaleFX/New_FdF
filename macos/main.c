@@ -21,6 +21,8 @@ int				main(int ac, char **av)
 
 	errno = 0;
 	coords_stack = NULL;
+	map = NULL;
+	window = NULL;
 	if (ac == 2)
 	{
 		if ((fd = open(av[1], O_RDONLY, 0)) <= 0)
