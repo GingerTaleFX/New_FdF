@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:51 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 17:56:26 by student          ###   ########.fr       */
+/*   Updated: 2020/05/10 19:07:41 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,11 +112,13 @@ t_window			*new_window(t_map *map);
 double				percent(int start, int end, int current);
 void				print_menu(t_window *window);
 void				push(t_coords **coords_stack, t_coords *new);
+void				put_pixel(t_window *window, int x, int y, int color);
 void				read_file(char *file, t_map *map, t_coords **coords_stack);
 void				rotate_x(double *y, double *z, double alpha);
 void				rotate_y(double *x, double *z, double beta);
 void				rotate_z(double *x, double *y, double gamma);
 void				rotation_btns(int key, t_window *window);
+void				single_dot(t_window *window, t_map *map);
 void				speed_btns(int key, t_window *window);
 void				shifting(int key, t_window *window);
 void				struct_freedom(t_map *map, t_window *window, \
