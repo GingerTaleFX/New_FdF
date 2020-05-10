@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:04 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 15:56:33 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 20:16:27 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,20 @@
 # define ZOOM_RIGHT_PLUS 65451
 # define ZOOM_RIGHT_MINUS 65453
 
-# define X_ROTATE_LEFT 65431
-# define X_ROTATE_RIGHT 65433
-# define Y_ROTATE_LEFT 65432
-# define Y_ROTATE_RIGHT 65430
-# define Z_ROTATE_LEFT 65434
-# define Z_ROTATE_RIGHT 65429
+# define X_RMAD_LEFT 65431
+# define X_RMAD_RIGHT 65433
+# define Y_RMAD_LEFT 65432
+# define Y_RMAD_RIGHT 65430
+# define Z_RMAD_LEFT 65436
+# define Z_RMAD_RIGHT 65435
+
+# define X_MPAD_LEFT 56
+# define X_MPAD_RIGHT 50
+# define Y_MPAD_LEFT 54
+# define Y_MPAD_RIGHT 52
+# define Z_MPAD_LEFT 49
+# define Z_MPAD_RIGHT 51
+
 
 # define ESC_BTN 65307
 

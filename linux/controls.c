@@ -36,17 +36,17 @@ void	alpine_msr(int key, t_window *window)
 
 void	rotation_btns(int key, t_window *window)
 {
-	if (key == X_ROTATE_LEFT)
+	if (key == X_RMAD_LEFT || key == X_MPAD_LEFT)
 		window->camera->alpha += window->camera->speed;
-	if (key == X_ROTATE_RIGHT)
+	if (key == X_RMAD_RIGHT || key == X_MPAD_RIGHT)
 		window->camera->alpha -= window->camera->speed;
-	if (key == Y_ROTATE_LEFT)
+	if (key == Y_RMAD_LEFT || key == Y_MPAD_LEFT)
 		window->camera->beta += window->camera->speed;
-	if (key == Y_ROTATE_RIGHT)
+	if (key == Y_RMAD_RIGHT || key == Y_MPAD_RIGHT)
 		window->camera->beta -= window->camera->speed;
-	if (key == Z_ROTATE_LEFT)
+	if (key == Z_RMAD_LEFT || key == Z_MPAD_LEFT)
 		window->camera->gamma += window->camera->speed;
-	if (key == Z_ROTATE_RIGHT)
+	if (key == Z_RMAD_RIGHT || key == Z_MPAD_RIGHT)
 		window->camera->gamma -= window->camera->speed;
 	draw(window->map, window);
 }
