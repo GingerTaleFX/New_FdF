@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 14:27:13 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 19:38:51 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 20:59:06 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 # define ESC_BTN 53
 
 # define ISO_BTN 34
-# define FLAT_BTN 31
+# define FLAT_BTN 35
 # define ALPINE_HIEGH 4
 # define ALPINE_LOW 37
 
@@ -30,18 +30,19 @@
 # define ZOOM_RIGHT_PLUS 69
 # define ZOOM_RIGHT_MINUS 78
 
-# define X_RMAD_LEFT 0
-# define X_RMAD_RIGHT 2
-# define Y_RMAD_LEFT 13
-# define Y_RMAD_RIGHT 1
-# define Z_RMAD_LEFT 12
-# define Z_RMAD_RIGHT 14
-# define X_MPAD_LEFT
-# define X_MPAD_RIGHT
-# define Y_MPAD_LEFT
-# define Y_MPAD_RIGHT
-# define Z_MPAD_LEFT
-# define Z_MPAD_RIGHT
+# define X_RMAD_LEFT 84
+# define X_RMAD_RIGHT 91
+# define Y_RMAD_LEFT 88
+# define Y_RMAD_RIGHT 86
+# define Z_RMAD_LEFT 83
+# define Z_RMAD_RIGHT 85
+
+# define X_MPAD_LEFT 19
+# define X_MPAD_RIGHT 28
+# define Y_MPAD_LEFT 22
+# define Y_MPAD_RIGHT 21
+# define Z_MPAD_LEFT 18
+# define Z_MPAD_RIGHT 20
 
 # define RESET_BTN 114
 

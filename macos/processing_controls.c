@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 15:36:05 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 19:07:21 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 21:00:52 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ int				key_press(int key, void *param)
 		key == Y_RMAD_RIGHT || key == Y_RMAD_LEFT || \
 		key == Z_RMAD_LEFT || key == Z_RMAD_RIGHT || \
 		key == X_MPAD_LEFT || key == X_MPAD_RIGHT || \
-		key == Y_MPAD_RIGHT || key == Y_MPADLEFT || \
+		key == Y_MPAD_RIGHT || key == Y_MPAD_LEFT || \
 		key == Z_MPAD_LEFT || key == Z_MPAD_RIGHT)
 		rotation_btns(key, window);
 	if (key == HIGH_SPEED || key == LOW_SPEED)

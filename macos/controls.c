@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:24 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 15:36:13 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 20:52:42 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,9 +44,9 @@ void	rotation_btns(int key, t_window *window)
 		window->camera->beta += window->camera->speed;
 	if (key == Y_RMAD_RIGHT || key == Y_MPAD_RIGHT)
 		window->camera->beta -= window->camera->speed;
-	if (key == Z_RMAD_LEFT || key == Z_MMAD_LEFT)
+	if (key == Z_RMAD_LEFT || key == Z_MPAD_LEFT)
 		window->camera->gamma += window->camera->speed;
-	if (key == Z_MPAD_RIGHT || key == Z_MPAD_RIGHT)
+	if (key == Z_RMAD_RIGHT || key == Z_MPAD_RIGHT)
 		window->camera->gamma -= window->camera->speed;
 	draw(window->map, window);
 }
