@@ -35,9 +35,12 @@ int				key_press(int key, void *param)
 		change_proj(key, window);
 	if (key == ALPINE_HIEGH || key == ALPINE_LOW)
 		alpine_msr(key, window);
-	if (key == X_ROTATE_LEFT || key == X_ROTATE_RIGHT || \
-		key == Y_ROTATE_RIGHT || key == Y_ROTATE_LEFT || \
-		key == Z_ROTATE_LEFT || key == Z_ROTATE_RIGHT)
+	if (key == X_RMAD_LEFT || key == X_RMAD_RIGHT || \
+		key == Y_RMAD_RIGHT || key == Y_RMAD_LEFT || \
+		key == Z_RMAD_LEFT || key == Z_RMAD_RIGHT || \
+		key == X_MPAD_LEFT || key == X_MPAD_RIGHT || \
+		key == Y_MPAD_RIGHT || key == Y_MPADLEFT || \
+		key == Z_MPAD_LEFT || key == Z_MPAD_RIGHT)
 		rotation_btns(key, window);
 	if (key == HIGH_SPEED || key == LOW_SPEED)
 		speed_btns(key, window);
