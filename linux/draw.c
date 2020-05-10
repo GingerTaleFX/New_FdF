@@ -6,22 +6,22 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:36 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 18:05:14 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 19:00:20 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
 
-void		put_pixel(t_window *fdf, int x, int y, int color)
+void		put_pixel(t_window *window, int x, int y, int color)
 {
 	int		i;
 
-	if (x >= MENU_WIDTH && x < fdf->win_x && y >= 0 && y < fdf->win_y)
+	if (x >= MENU_WIDTH && x < window->win_x && y >= 0 && y < window->win_y)
 	{
-		i = (x * fdf->bits_per_pixel / 8) + (y * fdf->size_line);
-		fdf->data_addr[i] = color;
-		fdf->data_addr[++i] = color >> 8;
-		fdf->data_addr[++i] = color >> 16;
+		i = (x * window->bits_per_pixel / 8) + (y * window->size_line);
+		window->data_addr[i] = color;
+		window->data_addr[++i] = color >> 8;
+		window->data_addr[++i] = color >> 16;
 	}
 }
 
@@ -88,16 +88,17 @@ void		draw(t_map *map, t_window *window)
 		x = 0;
 		while (x < map->width)
 		{
-			if (x != window->map->width - 1 || map->width == 1)
+			if (x != window->map->width - 1)
 				bresenham(visual_ops(new_point(x, y, map), window), \
 				visual_ops(new_point(x + 1, y, map), window), window);
-			if (y != window->map->height - 1 || map->height == 1)
+			if (y != window->map->height - 1)
 				bresenham(visual_ops(new_point(x, y, map), window), \
 				visual_ops(new_point(x, y + 1, map), window), window);
 			x++;
 		}
 		y++;
 	}
+	single_dot(window, map);
 	mlx_put_image_to_window(window->mlx_ptr, \
 	window->win_ptr, window->img, 0, 0);
 	print_menu(window);

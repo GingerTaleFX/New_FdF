@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:59:08 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 16:29:59 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 19:01:33 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,4 +60,12 @@ void		count_white_spaces(char *line)
 		space = 0;
 		i++;
 	}
+}
+
+void		single_dot(t_window *window, t_map *map)
+{
+	t_point single;
+
+	single = visual_ops(new_point(window->map->width, window->map->height, map), window);
+	put_pixel(window, single.x, single.y, single.color);
 }
