@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 16:14:40 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:11:04 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,26 +65,16 @@ int			count_height(char *file)
 int			count_width(int fd)
 {
 	int		width;
-	int		*mass;
 	int		ret;
-	int		i;
 	char	*line;
-
-	i = 0;
-	if (!(mass = (int *)ft_memalloc(sizeof(int) * 2)))
-		terminate(ERR_READING);
-	while ((ret = get_next_line(fd, &line)))
+	while ((ret = get_next_line(fd, &line)) == 1)
 	{
 		if (ret <= 0 || (width = ft_cl(line, ' ')) == 0)
 			terminate(ERR_MAP);
 		count_white_spaces(line);
-		mass[i] = width;
-		i++;
-		checker(mass, i);
 		free(line);
 	}
 	free(line);
-	free(mass);
 	return (width);
 }
 

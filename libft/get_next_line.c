@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/15 16:52:07 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/08 20:42:16 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/09 15:28:03 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,7 @@ int					get_next_line(const int fd, char **line)
 	t_arr			*tmp;
 	int				ret;
 
+	ret = 0;
 	if (fd < 0 || line == 0)
 		return (-1);
 	if (!list)
