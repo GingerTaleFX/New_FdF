@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/22 14:27:13 by ginger            #+#    #+#             */
-/*   Updated: 2020/04/23 12:45:49 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 17:55:20 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,12 +30,12 @@
 # define ZOOM_RIGHT_PLUS 69
 # define ZOOM_RIGHT_MINUS 78
 
-# define X_ROTATE_LEFT 0
-# define X_ROTATE_RIGHT 2
-# define Y_ROTATE_LEFT 13
-# define Y_ROTATE_RIGHT 1
-# define Z_ROTATE_LEFT 12
-# define Z_ROTATE_RIGHT 14
+# define X_ROTATE_LEFT 91
+# define X_ROTATE_RIGHT 84
+# define Y_ROTATE_LEFT 88
+# define Y_ROTATE_RIGHT 86
+# define Z_ROTATE_LEFT 92
+# define Z_ROTATE_RIGHT 89
 
 # define RESET_BTN 114
 
