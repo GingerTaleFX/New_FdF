@@ -75,6 +75,7 @@ void	zoom(int key, t_window *window)
 		window->camera->zoom += 1;
 	if (key == ZOOM_MINUS || key == ZOOM_RIGHT_MINUS \
 	|| key == MOUSE_SCROLL_DOWN)
-		window->camera->zoom -= 1;
+		if (window->camera->zoom > 1)
+			window->camera->zoom -= 1;
 	draw(window->map, window);
 }

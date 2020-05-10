@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:24 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 15:36:13 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 19:13:20 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void	zoom(int key, t_window *window)
 		window->camera->zoom += 1;
 	if (key == ZOOM_MINUS || key == ZOOM_RIGHT_MINUS \
 	|| key == MOUSE_SCROLL_DOWN)
+		if (window->camera->zoom > 1)
 		window->camera->zoom -= 1;
 	draw(window->map, window);
 }

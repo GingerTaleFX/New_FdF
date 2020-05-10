@@ -13,7 +13,7 @@
 #ifndef FDF_H
 # define FDF_H
 
-# include "libft/libft.h"
+# include "../libft/libft.h"
 # include "errors.h"
 # include "colors.h"
 # include "linux_controls.h"
