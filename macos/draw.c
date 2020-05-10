@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:36 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 16:23:09 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 18:05:14 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,10 +88,10 @@ void		draw(t_map *map, t_window *window)
 		x = 0;
 		while (x < map->width)
 		{
-			if (x != window->map->width - 1)
+			if (x != window->map->width - 1 || map->width == 1)
 				bresenham(visual_ops(new_point(x, y, map), window), \
 				visual_ops(new_point(x + 1, y, map), window), window);
-			if (y != window->map->height - 1)
+			if (y != window->map->height - 1 || map->height == 1)
 				bresenham(visual_ops(new_point(x, y, map), window), \
 				visual_ops(new_point(x, y + 1, map), window), window);
 			x++;
