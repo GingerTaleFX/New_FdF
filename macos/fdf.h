@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:51 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 19:07:41 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 19:09:43 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,7 @@ void				change_proj(int key, t_window *window);
 void				controls(t_window *window);
 void				count_white_spaces(char *line);
 void				draw(t_map *map, t_window *window);
+void				if_one_dot(t_map *map, t_window *window);
 t_camera			*init_camera_position(void);
 void				free_arr(char **arr);
 int					ft_atoi_base(const char *str, int base);
@@ -127,5 +128,6 @@ void				structure_to_array(t_coords **coords_stack, t_map *map);
 void				terminate(char *s);
 t_point				visual_ops(t_point p, t_window *window);
 void				zoom(int key, t_window *window);
+
 
 #endif

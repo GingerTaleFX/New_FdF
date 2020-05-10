@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:36 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 19:00:20 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 19:21:55 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,6 +82,7 @@ void		draw(t_map *map, t_window *window)
 	double	y;
 
 	draw_background(window);
+	if_one_dot(map, window);
 	y = 0;
 	while (y < map->height)
 	{
@@ -98,7 +99,6 @@ void		draw(t_map *map, t_window *window)
 		}
 		y++;
 	}
-	single_dot(window, map);
 	mlx_put_image_to_window(window->mlx_ptr, \
 	window->win_ptr, window->img, 0, 0);
 	print_menu(window);

@@ -46,3 +46,9 @@ double		percent(int start, int end, int current)
 	else
 		return ((placement / distance));
 }
+
+void		if_one_dot(t_map *map, t_window *window)
+{
+	if (window->map->width == 1 && window->map->height == 1)
+		single_dot(window, map);
+}
