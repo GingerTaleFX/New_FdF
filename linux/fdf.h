@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:51 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/09 14:44:40 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:27:42 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,8 +94,6 @@ typedef struct		s_window
 
 void				alpine_msr(int key, t_window *window);
 void				change_proj(int key, t_window *window);
-void				checker(int *mass, int i);
-int					check_width(int *width);
 void				controls(t_window *window);
 void				count_white_spaces(char *line);
 void				draw(t_map *map, t_window *window);

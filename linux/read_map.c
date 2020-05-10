@@ -67,6 +67,7 @@ int			count_width(int fd)
 	int		width;
 	int		ret;
 	char	*line;
+
 	while ((ret = get_next_line(fd, &line)) == 1)
 	{
 		if (ret <= 0 || (width = ft_cl(line, ' ')) == 0)

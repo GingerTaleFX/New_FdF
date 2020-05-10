@@ -93,8 +93,6 @@ typedef struct		s_window
 
 void				alpine_msr(int key, t_window *window);
 void				change_proj(int key, t_window *window);
-void				checker(int *mass, int i);
-int					check_width(int *width);
 void				controls(t_window *window);
 void				count_white_spaces(char *line);
 void				draw(t_map *map, t_window *window);

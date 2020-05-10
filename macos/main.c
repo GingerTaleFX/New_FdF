@@ -6,11 +6,18 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:22 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/09 14:33:29 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:36:35 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fdf.h"
+
+void			nulling_funcs(t_map *map, t_coords *coords, t_window *window)
+{
+	coords_stack = NULL;
+	map = NULL;
+	window = NULL;
+}
 
 int				main(int ac, char **av)
 {
@@ -20,9 +27,7 @@ int				main(int ac, char **av)
 	int			fd;
 
 	errno = 0;
-	coords_stack = NULL;
-	map = NULL;
-	window = NULL;
+	nulling_funcs(map, coords_stack, window);
 	if (ac == 2)
 	{
 		if ((fd = open(av[1], O_RDONLY, 0)) <= 0)

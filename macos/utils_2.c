@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:59:19 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 16:25:39 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:29:59 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,13 +45,4 @@ double		percent(int start, int end, int current)
 		return (1.0);
 	else
 		return ((placement / distance));
-}
-
-void		checker(int *mass, int i)
-{
-	if (i == 2)
-	{
-		if (!(check_width(mass)))
-			terminate(ERR_WIDTH);
-	}
 }

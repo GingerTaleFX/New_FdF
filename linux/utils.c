@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:59:08 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/07 16:26:43 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/10 16:29:59 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,20 +50,14 @@ void		count_white_spaces(char *line)
 	space = 0;
 	while (line[i])
 	{
-		while (line[i++] == ' ')
+		while (line[i] == ' ')
+		{
 			space++;
+			i++;
+		}
 		if (space > 3)
 			terminate(ERR_SPACES);
 		space = 0;
+		i++;
 	}
-}
-
-int			check_width(int *width)
-{
-	int		i;
-
-	i = 0;
-	if (width[i] != width[i + 1])
-		return (0);
-	return (1);
 }
