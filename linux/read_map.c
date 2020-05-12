@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/12 17:56:37 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/12 18:14:07 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,11 +88,10 @@ int			count_width(int fd, int i, t_map *map)
 void		read_file(char *file, t_map *map, t_coords **coords_stack)
 {
 	int		fd;
-	char	*buff[2];
 	int		ret;
 
 	fd = open(file, O_RDONLY, 0);
-	if((ret = read(fd, buff, BUFF_SIZE + 1)) < 0)
+	if ((ret = read(fd, 0, 0)) < 0)
 		terminate(ERR_MAP);
 	map->height = count_height(file);
 	map->width = count_width(fd, map->height, map);
