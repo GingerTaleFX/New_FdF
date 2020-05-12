@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 18:50:46 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/12 17:36:02 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,19 +62,26 @@ int			count_height(char *file)
 	return (height);
 }
 
-int			count_width(int fd)
+int			count_width(int fd, int i, t_map *map)
 {
 	int		width;
 	int		ret;
 	char	*line;
 
+	if (!(map->w_checker = (int *)ft_memalloc(sizeof(int) * i)))
+		terminate(ERR_MAP);
+	i = 0;
 	while ((ret = get_next_line(fd, &line)) == 1)
 	{
 		if (ret <= 0 || (width = ft_cl(line, ' ')) == 0)
 			terminate(ERR_MAP);
 		count_white_spaces(line);
+		map->w_checker[i] = width;
+		printf("w_cheker[%d] = %d\n", i, map->w_checker[i]);
+		i++;
 		free(line);
 	}
+	ckeck_width(map);
 	free(line);
 	return (width);
 }
@@ -84,8 +91,8 @@ void		read_file(char *file, t_map *map, t_coords **coords_stack)
 	int		fd;
 
 	fd = open(file, O_RDONLY, 0);
-	map->width = count_width(fd);
 	map->height = count_height(file);
+	map->width = count_width(fd, map->height, map);
 	get_coords(file, coords_stack);
 	close(fd);
 }

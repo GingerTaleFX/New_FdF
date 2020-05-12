@@ -42,7 +42,6 @@
 # define Z_MPAD_LEFT 49
 # define Z_MPAD_RIGHT 51
 
-
 # define ESC_BTN 65307
 
 # define HIGH_SPEED 48

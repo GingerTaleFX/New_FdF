@@ -56,6 +56,7 @@ typedef struct		s_map
 {
 	int				width;
 	int				height;
+	int				*w_checker;
 	int				*coords_arr;
 	int				*colors_arr;
 	int				z_min;
@@ -94,6 +95,7 @@ typedef struct		s_window
 
 void				alpine_msr(int key, t_window *window);
 void				change_proj(int key, t_window *window);
+void				ckeck_width(t_map *map);
 void				controls(t_window *window);
 void				count_white_spaces(char *line);
 void				draw(t_map *map, t_window *window);
@@ -129,6 +131,5 @@ void				structure_to_array(t_coords **coords_stack, t_map *map);
 void				terminate(char *s);
 t_point				visual_ops(t_point p, t_window *window);
 void				zoom(int key, t_window *window);
-
 
 #endif
