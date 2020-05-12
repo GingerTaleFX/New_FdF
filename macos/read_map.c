@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/12 19:33:38 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/12 19:43:28 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int			count_width(int fd, int i, t_map *map)
 	int		ret;
 	char	*line;
 
-	if (!(map->w_checker = (int *)ft_memalloc(sizeof(int) * i + 1)))
+	if (!(map->w_checker = (int *)ft_memalloc(sizeof(int) * (i + 1))))
 		terminate(ERR_MAP);
 	i = 0;
 	while ((ret = get_next_line(fd, &line)) == 1)
@@ -90,11 +90,8 @@ int			count_width(int fd, int i, t_map *map)
 void		read_file(char *file, t_map *map, t_coords **coords_stack)
 {
 	int		fd;
-	int		ret;
 
 	fd = open(file, O_RDONLY, 0);
-	if ((ret = read(fd, 0, 0)) < 0)
-		terminate(ERR_MAP);
 	map->height = count_height(file);
 	map->width = count_width(fd, map->height, map);
 	get_coords(file, coords_stack);

@@ -19,6 +19,16 @@ void			nulling_funcs(t_map **map, t_coords **coords, t_window **window)
 	window = NULL;
 }
 
+void			file_checker(char *file)
+{
+	int			fd;
+	int			rd;
+
+	if ((fd = open(file, O_RDONLY, 0)) <= 0 || \
+		(rd = read(fd, 0, 0)) < 0)
+		terminate(ERR_READING);
+}
+
 int				main(int ac, char **av)
 {
 	t_map		*map;
@@ -30,8 +40,7 @@ int				main(int ac, char **av)
 	nulling_funcs(&map, &coords_stack, &window);
 	if (ac == 2)
 	{
-		if ((fd = open(av[1], O_RDONLY, 0)) <= 0)
-			terminate(ERR_READING);
+		file_checker(av[1]);
 		map = new_map();
 		read_file(av[1], map, &coords_stack);
 		if (!(window = new_window(map)))
