@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/12 18:14:07 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/12 19:33:38 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ int			count_width(int fd, int i, t_map *map)
 	int		ret;
 	char	*line;
 
-	if (!(map->w_checker = (int *)ft_memalloc(sizeof(int) * i)))
+	if (!(map->w_checker = (int *)ft_memalloc(sizeof(int) * i + 1)))
 		terminate(ERR_MAP);
 	i = 0;
 	while ((ret = get_next_line(fd, &line)) == 1)
@@ -80,7 +80,9 @@ int			count_width(int fd, int i, t_map *map)
 		i++;
 		free(line);
 	}
+	map->w_checker[i] = width;
 	ckeck_width(map);
+	free(map->w_checker);
 	free(line);
 	return (width);
 }
