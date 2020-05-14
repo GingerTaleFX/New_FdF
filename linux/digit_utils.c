@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:30 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/12 17:37:21 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/12 20:11:00 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,17 +94,4 @@ int					ft_atoi_base(const char *str, int base)
 	while (ft_is_digit_base(str[i], base) >= 0)
 		result = result * base + ft_is_digit_base(str[i++], base);
 	return ((int)(result * sign));
-}
-
-void				ckeck_width(t_map *map)
-{
-	int				i;
-
-	i = 0;
-	while (i < map->height - 1)
-	{
-		if (map->w_checker[i] != map->w_checker[i + 1])
-			terminate(ERR_WIDTH);
-		i++;
-	}
 }

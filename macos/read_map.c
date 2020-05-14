@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/12 19:43:28 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/14 19:03:54 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,7 @@ int			count_height(char *file)
 	return (height);
 }
 
+
 int			count_width(int fd, int i, t_map *map)
 {
 	int		width;
@@ -73,15 +74,16 @@ int			count_width(int fd, int i, t_map *map)
 	i = 0;
 	while ((ret = get_next_line(fd, &line)) == 1)
 	{
-		if (ret <= 0 || (width = ft_cl(line, ' ')) == 0)
+		if (i == 0)
+			map->etol_w_s = make_etol(line, ' ');
+		if (ret <= 0 || (width = count_check(line, ' ', map)) == 0)
 			terminate(ERR_MAP);
-		count_white_spaces(line);
 		map->w_checker[i] = width;
 		i++;
 		free(line);
 	}
 	map->w_checker[i] = width;
-	ckeck_width(map);
+	check_width(map);
 	free(map->w_checker);
 	free(line);
 	return (width);

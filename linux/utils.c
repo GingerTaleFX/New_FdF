@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:59:08 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 19:02:23 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/14 18:47:50 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,27 +39,6 @@ int			ft_is_space(int c)
 			c == '\f' ||
 			c == '\r' ||
 			c == ' ');
-}
-
-void		count_white_spaces(char *line)
-{
-	int		space;
-	int		i;
-
-	i = 0;
-	space = 0;
-	while (line[i])
-	{
-		while (line[i] == ' ')
-		{
-			space++;
-			i++;
-		}
-		if (space > 3)
-			terminate(ERR_SPACES);
-		space = 0;
-		i++;
-	}
 }
 
 void		single_dot(t_window *window, t_map *map)

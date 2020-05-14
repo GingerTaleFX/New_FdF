@@ -25,7 +25,8 @@ SRCS = main.c \
 		controls.c \
 		rotation.c \
 		menu.c \
-		processing_controls.c
+		processing_controls.c \
+		utils_3.c
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror

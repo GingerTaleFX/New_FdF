@@ -6,7 +6,7 @@
 #    By: ginger <ginger@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2020/04/22 13:50:30 by ginger            #+#    #+#              #
-#    Updated: 2020/05/08 10:21:53 by ginger           ###   ########.fr        #
+#    Updated: 2020/05/14 19:11:17 by ginger           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,8 @@ SRCS = main.c \
 		controls.c \
 		rotation.c \
 		menu.c \
-		processing_controls.c
+		processing_controls.c \
+		utils_3.c
 
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
