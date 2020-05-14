@@ -62,7 +62,6 @@ int			count_height(char *file)
 	return (height);
 }
 
-
 int			count_width(int fd, int i, t_map *map)
 {
 	int		width;
