@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:51 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/14 19:08:20 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/16 16:29:37 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void				alpine_msr(int key, t_window *window);
 void				change_proj(int key, t_window *window);
 void				check_width(t_map *map);
 void				controls(t_window *window);
-int					count_check(char const *s, char c, t_map *map);
+int					count_check(char const *s, char c);
 void				draw(t_map *map, t_window *window);
 void				if_one_dot(t_map *map, t_window *window);
 t_camera			*init_camera_position(void);

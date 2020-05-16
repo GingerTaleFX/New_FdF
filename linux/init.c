@@ -34,8 +34,8 @@ t_window		*new_window(t_map *map)
 
 	if (!(window = (t_window *)ft_memalloc(sizeof(t_window))))
 		terminate(ERR_WINDOW_INIT);
-	window->win_x = 1920;
-	window->win_y = 1080;
+	window->win_x = 1136;
+	window->win_y = 768;
 	if (!(window->mlx_ptr = mlx_init()))
 		terminate(ERR_WINDOW_INIT);
 	if (!(window->win_ptr = mlx_new_window(window->mlx_ptr, \
