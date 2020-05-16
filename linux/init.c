@@ -22,8 +22,8 @@ t_map			*new_map(void)
 	map->height = 0;
 	map->coords_arr = NULL;
 	map->colors_arr = NULL;
-	map->z_min = FT_INT_MAX;
-	map->z_max = FT_INT_MIN;
+	map->z_min = FT_INT_MIN;
+	map->z_max = FT_INT_MAX;
 	map->z_range = 0;
 	return (map);
 }
