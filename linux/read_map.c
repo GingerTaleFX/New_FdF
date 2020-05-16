@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:48 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/14 19:03:54 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/16 16:28:03 by ginger           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,9 +73,7 @@ int			count_width(int fd, int i, t_map *map)
 	i = 0;
 	while ((ret = get_next_line(fd, &line)) == 1)
 	{
-		if (i == 0)
-			map->etol_w_s = make_etol(line, ' ');
-		if (ret <= 0 || (width = count_check(line, ' ', map)) == 0)
+		if (ret <= 0 || (width = count_check(line, ' ')) == 0)
 			terminate(ERR_MAP);
 		map->w_checker[i] = width;
 		i++;

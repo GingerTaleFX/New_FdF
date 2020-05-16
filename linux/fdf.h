@@ -57,7 +57,6 @@ typedef struct		s_map
 	int				width;
 	int				height;
 	int				*w_checker;
-	int				etol_w_s;
 	int				*coords_arr;
 	int				*colors_arr;
 	int				z_min;
@@ -110,7 +109,6 @@ int					get_default_color(int z, t_map *map);
 int					get_color(t_point current, t_point start, \
 					t_point end, t_point delta);
 int					get_index(int x, int y, int width);
-int					make_etol(char const *s, char c);
 t_coords			*new_coord(char *line);
 t_map				*new_map(void);
 t_point				new_point(int x, int y, t_map *map);
