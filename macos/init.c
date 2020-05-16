@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:57:58 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/16 16:33:50 by ginger           ###   ########.fr       */
+/*   Updated: 2020/05/16 18:32:29 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ t_window		*new_window(t_map *map)
 	if (!(window = (t_window *)ft_memalloc(sizeof(t_window))))
 		terminate(ERR_WINDOW_INIT);
 	window->win_x = 1136;
-	window->win_y = 768-;
+	window->win_y = 768;
 	if (!(window->mlx_ptr = mlx_init()))
 		terminate(ERR_WINDOW_INIT);
 	if (!(window->win_ptr = mlx_new_window(window->mlx_ptr, \

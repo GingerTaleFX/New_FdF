@@ -6,7 +6,7 @@
 /*   By: ginger <ginger@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/05/07 11:58:22 by ginger            #+#    #+#             */
-/*   Updated: 2020/05/10 20:50:31 by student          ###   ########.fr       */
+/*   Updated: 2020/05/16 18:32:11 by student          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int				main(int ac, char **av)
 	t_map		*map;
 	t_coords	*coords_stack;
 	t_window	*window;
-	int			fd;
 
 	errno = 0;
 	nulling_funcs(&map, &coords_stack, &window);
